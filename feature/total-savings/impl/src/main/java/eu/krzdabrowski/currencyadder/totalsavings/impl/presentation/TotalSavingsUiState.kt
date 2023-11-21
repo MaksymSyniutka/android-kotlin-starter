@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.totalsavings.ui
+package eu.krzdabrowski.currencyadder.totalsavings.impl.presentation
 
 import android.os.Parcelable
 import androidx.compose.runtime.Immutable

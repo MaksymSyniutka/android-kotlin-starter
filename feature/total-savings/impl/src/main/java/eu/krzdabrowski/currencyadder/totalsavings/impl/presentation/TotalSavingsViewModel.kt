@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.totalsavings.ui
+package eu.krzdabrowski.currencyadder.totalsavings.impl.presentation
 
 import androidx.lifecycle.SavedStateHandle
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -8,12 +8,12 @@ import eu.krzdabrowski.currencyadder.exchangerates.api.domain.usecase.GetAllCurr
 import eu.krzdabrowski.currencyadder.totalsavings.api.domain.usecase.GetChosenCurrencyCodeForTotalSavingsUseCase
 import eu.krzdabrowski.currencyadder.totalsavings.api.domain.usecase.GetTotalUserSavingsUseCase
 import eu.krzdabrowski.currencyadder.totalsavings.api.domain.usecase.UpdateChosenCurrencyCodeForTotalSavingsUseCase
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsIntent.UpdateChosenCurrencyCodeForTotalSavings
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState.PartialState
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState.PartialState.ChosenCurrencyCodeChanged
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState.PartialState.CurrencyCodesFetched
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState.PartialState.TotalUserSavingsFetched
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState.PartialState.Error
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsIntent.UpdateChosenCurrencyCodeForTotalSavings
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState.PartialState
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState.PartialState.ChosenCurrencyCodeChanged
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState.PartialState.CurrencyCodesFetched
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState.PartialState.TotalUserSavingsFetched
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState.PartialState.Error
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map

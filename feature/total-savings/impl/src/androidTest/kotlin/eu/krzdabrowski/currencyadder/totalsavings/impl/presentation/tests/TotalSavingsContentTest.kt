@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.totalsavings.ui.tests
+package eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.tests
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -6,8 +6,8 @@ import androidx.compose.ui.test.performClick
 import eu.krzdabrowski.currencyadder.exchangerates.api.data.dummy.generateTestCurrencyCodesFromPresentation
 import eu.krzdabrowski.currencyadder.totalsavings.api.data.dummy.generateTestChosenCurrencyCodeForTotalSavingsFromPresentation
 import eu.krzdabrowski.currencyadder.totalsavings.api.data.dummy.generateTestTotalUserSavingsFromPresentation
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState
-import eu.krzdabrowski.currencyadder.totalsavings.ui.composable.TotalSavingsContent
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.composable.TotalSavingsContent
 import org.junit.Rule
 import org.junit.Test
 

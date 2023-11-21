@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.junit)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.detekt)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -11,12 +13,25 @@ android {
     testFixtures {
         enable = true
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
 }
 
 dependencies {
-    implementation(projects.feature.totalSavings.api)
+    implementation(projects.core.architecture.android)
     implementation(projects.core.database.api)
     implementation(projects.core.utils.android)
+    implementation(projects.feature.totalSavings.api)
+
+    implementation(projects.feature.exchangeRates.api)
+    implementation(projects.feature.totalSavings.api)
+    implementation(projects.feature.userSavings.api)
 
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
@@ -36,4 +51,15 @@ dependencies {
 
     kspTestFixtures(libs.hilt.compiler)
     kspTestFixtures(libs.test.android.hilt.compiler)
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.material3)
+
+    kspAndroidTest(libs.test.android.hilt.compiler)
+
+    detektPlugins(libs.detekt.compose.rules)
+
+    androidTestImplementation(testFixtures(projects.feature.exchangeRates.api))
+    androidTestImplementation(testFixtures(projects.feature.totalSavings.api))
+    androidTestImplementation(projects.core.utils.test.android)
 }

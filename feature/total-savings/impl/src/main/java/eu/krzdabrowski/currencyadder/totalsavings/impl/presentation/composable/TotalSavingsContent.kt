@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.totalsavings.ui.composable
+package eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -25,8 +25,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import eu.krzdabrowski.currencyadder.totalsavings.ui.R
-import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState
+import eu.krzdabrowski.currencyadder.totalsavings.impl.R
+import eu.krzdabrowski.currencyadder.totalsavings.impl.presentation.TotalSavingsUiState
 
 @Composable
 fun TotalSavingsContent(

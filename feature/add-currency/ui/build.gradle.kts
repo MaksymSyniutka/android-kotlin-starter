@@ -21,7 +21,7 @@ dependencies {
     implementation(projects.core.navigation.android)
     implementation(projects.core.utils.android)
 
-    implementation(projects.feature.totalSavings.ui)
+    implementation(projects.feature.totalSavings.impl)
     implementation(projects.feature.userSavings.impl)
 
     implementation(platform(libs.compose.bom))
