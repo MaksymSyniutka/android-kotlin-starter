@@ -60,7 +60,6 @@ dependencies {
     implementation(projects.feature.totalSavings.impl) // needed for DI
     implementation(projects.feature.totalSavings.ui) // needed for DI
     implementation(projects.feature.userSavings.impl) // needed for DI
-    implementation(projects.feature.userSavings.ui) // needed for DI
 
     implementation(libs.hilt)
     implementation(libs.timber)

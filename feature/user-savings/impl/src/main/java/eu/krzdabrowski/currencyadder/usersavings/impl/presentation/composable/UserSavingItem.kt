@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui.composable
+package eu.krzdabrowski.currencyadder.usersavings.impl.presentation.composable
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
@@ -52,8 +52,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import eu.krzdabrowski.currencyadder.core.utils.compose.DebounceEffect
-import eu.krzdabrowski.currencyadder.usersavings.ui.R.string
-import eu.krzdabrowski.currencyadder.usersavings.ui.model.UserSavingDisplayable
+import eu.krzdabrowski.currencyadder.usersavings.impl.R
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model.UserSavingDisplayable
 
 private const val SWIPE_ICON_SIZE_INACTIVE_PERCENTAGE = 0.75f
 private const val MAX_TOTAL_DIGITS = 12
@@ -95,7 +95,7 @@ fun UserSavingItem(
         },
         modifier = modifier
             .testTag(
-                stringResource(string.user_saving_content_description),
+                stringResource(R.string.user_saving_content_description),
             ),
     )
 }

@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui.model
+package eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

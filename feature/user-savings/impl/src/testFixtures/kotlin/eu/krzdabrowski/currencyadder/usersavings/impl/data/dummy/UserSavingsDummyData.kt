@@ -1,7 +1,7 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui.data.dummy
+package eu.krzdabrowski.currencyadder.usersavings.impl.data.dummy
 
 import eu.krzdabrowski.currencyadder.exchangerates.api.data.dummy.generateTestCurrencyCodesFromPresentation
-import eu.krzdabrowski.currencyadder.usersavings.ui.model.UserSavingDisplayable
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model.UserSavingDisplayable
 
 fun generateTestUserSavingsFromPresentation() = listOf(
     UserSavingDisplayable(

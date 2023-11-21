@@ -13,22 +13,22 @@ import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsIntent.UpdateCh
 import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsUiState
 import eu.krzdabrowski.currencyadder.totalsavings.ui.TotalSavingsViewModel
 import eu.krzdabrowski.currencyadder.totalsavings.ui.composable.TotalSavingsContent
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.AddUserSaving
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.GetCurrencyCodesThatStartWith
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.RefreshExchangeRates
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.RemoveUserSaving
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.SwapUserSavings
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsIntent.UpdateUserSaving
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsUiState
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsViewModel
-import eu.krzdabrowski.currencyadder.usersavings.ui.composable.UserSavingsContent
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.AddUserSaving
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.GetCurrencyCodesThatStartWith
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.RefreshExchangeRates
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.RemoveUserSaving
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.SwapUserSavings
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent.UpdateUserSaving
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsUiState
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsViewModel
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.composable.UserSavingsContent
 
 private const val USER_SAVINGS_SCREEN_HEIGHT_FRACTION = 0.8f
 
 @Composable
 internal fun CurrencyAdderRoute(
-    userSavingsViewModel: UserSavingsViewModel = hiltViewModel(),
+    userSavingsViewModel: eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsViewModel = hiltViewModel(),
     totalSavingsViewModel: TotalSavingsViewModel = hiltViewModel(),
 ) {
     val userSavingsUiState by userSavingsViewModel.uiState.collectAsStateWithLifecycle()
@@ -44,13 +44,13 @@ internal fun CurrencyAdderRoute(
 
 @Composable
 private fun CurrencyAdderScreen(
-    userSavingsUiState: UserSavingsUiState,
+    userSavingsUiState: eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsUiState,
     totalSavingsUiState: TotalSavingsUiState,
-    onUserSavingsIntent: (UserSavingsIntent) -> Unit,
+    onUserSavingsIntent: (eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsIntent) -> Unit,
     onTotalSavingsIntent: (TotalSavingsIntent) -> Unit,
 ) {
     Column {
-        UserSavingsContent(
+        eu.krzdabrowski.currencyadder.usersavings.impl.presentation.composable.UserSavingsContent(
             uiState = userSavingsUiState,
             modifier = Modifier.fillMaxHeight(USER_SAVINGS_SCREEN_HEIGHT_FRACTION),
             onAddUserSaving = {

@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui.composable
+package eu.krzdabrowski.currencyadder.usersavings.impl.presentation.composable
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.background
@@ -37,16 +37,14 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import eu.krzdabrowski.currencyadder.core.utils.compose.DraggableItem
 import eu.krzdabrowski.currencyadder.core.utils.compose.dragContainer
-import eu.krzdabrowski.currencyadder.core.utils.compose.rememberDragDropState
-import eu.krzdabrowski.currencyadder.usersavings.ui.R.dimen
-import eu.krzdabrowski.currencyadder.usersavings.ui.R.string
-import eu.krzdabrowski.currencyadder.usersavings.ui.UserSavingsUiState
-import eu.krzdabrowski.currencyadder.usersavings.ui.model.UserSavingDisplayable
+import eu.krzdabrowski.currencyadder.usersavings.impl.R
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.UserSavingsUiState
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model.UserSavingDisplayable
 
 private val headerStringResources = listOf(
-    string.list_header_place,
-    string.list_header_saving,
-    string.list_header_currency,
+    R.string.list_header_place,
+    R.string.list_header_saving,
+    R.string.list_header_currency,
 )
 
 @Composable
@@ -69,7 +67,7 @@ fun UserSavingsContent(
             FloatingActionButton(
                 onClick = onAddUserSaving,
             ) {
-                Icon(Icons.Filled.Add, stringResource(string.add_user_saving_content_description))
+                Icon(Icons.Filled.Add, stringResource(R.string.add_user_saving_content_description))
             }
         },
     ) {
@@ -106,7 +104,7 @@ private fun UserSavingsAvailableContent(
     getCurrencyCodesThatStartWith: (String, Long) -> Unit,
 ) {
     if (uiState.isError) {
-        val errorMessage = stringResource(string.exchange_rates_error_refreshing)
+        val errorMessage = stringResource(R.string.exchange_rates_error_refreshing)
 
         LaunchedEffect(snackbarHostState) {
             snackbarHostState.showSnackbar(
@@ -135,7 +133,7 @@ private fun UserSavingsNotAvailableContent() {
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = stringResource(string.list_empty_message),
+            text = stringResource(R.string.list_empty_message),
             style = MaterialTheme.typography.titleLarge,
         )
     }
@@ -150,7 +148,7 @@ private fun UserSavingsHeader(
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.primaryContainer)
             .padding(
-                vertical = dimensionResource(dimen.dimen_small),
+                vertical = dimensionResource(R.dimen.dimen_small),
             ),
         horizontalArrangement = Arrangement.SpaceAround,
     ) {

@@ -22,7 +22,7 @@ dependencies {
     implementation(projects.core.utils.android)
 
     implementation(projects.feature.totalSavings.ui)
-    implementation(projects.feature.userSavings.ui)
+    implementation(projects.feature.userSavings.impl)
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.material3)

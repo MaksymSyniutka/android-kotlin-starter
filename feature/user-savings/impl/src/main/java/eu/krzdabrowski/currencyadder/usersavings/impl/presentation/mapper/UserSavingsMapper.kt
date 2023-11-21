@@ -1,8 +1,8 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui.mapper
+package eu.krzdabrowski.currencyadder.usersavings.impl.presentation.mapper
 
 import eu.krzdabrowski.currencyadder.usersavings.api.domain.model.UserSaving
 import eu.krzdabrowski.currencyadder.core.utils.toFormattedAmount
-import eu.krzdabrowski.currencyadder.usersavings.ui.model.UserSavingDisplayable
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model.UserSavingDisplayable
 
 private const val DEFAULT_SAVING_VALUE: Double = 0.0
 

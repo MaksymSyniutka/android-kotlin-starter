@@ -1,6 +1,6 @@
-package eu.krzdabrowski.currencyadder.usersavings.ui
+package eu.krzdabrowski.currencyadder.usersavings.impl.presentation
 
-import eu.krzdabrowski.currencyadder.usersavings.ui.model.UserSavingDisplayable
+import eu.krzdabrowski.currencyadder.usersavings.impl.presentation.model.UserSavingDisplayable
 
 sealed interface UserSavingsIntent {
     data object AddUserSaving : UserSavingsIntent
