@@ -48,6 +48,7 @@ android-application                 = { id = "com.android.application", version.
 android-library                     = { id = "com.android.library", version.ref = "android-gradle" }
 detekt                              = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 hilt                                = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+java-test-fixtures                  = { id = "java-test-fixtures" }
 junit                               = { id = "de.mannodermaus.android-junit5", version.ref = "junit" }
 kotlin                              = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-android                      = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
