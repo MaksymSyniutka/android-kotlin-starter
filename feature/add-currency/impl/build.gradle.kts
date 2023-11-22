@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "eu.krzdabrowski.currencyadder.addcurrency.ui"
+    namespace = "eu.krzdabrowski.currencyadder.addcurrency.impl"
 
     buildFeatures {
         compose = true

@@ -1,4 +1,4 @@
-package eu.krzdabrowski.currencyadder.addcurrency.ui
+package eu.krzdabrowski.currencyadder.addcurrency.impl
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight

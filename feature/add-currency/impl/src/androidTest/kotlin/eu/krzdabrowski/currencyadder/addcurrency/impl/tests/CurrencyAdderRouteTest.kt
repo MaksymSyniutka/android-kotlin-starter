@@ -1,11 +1,11 @@
-package eu.krzdabrowski.currencyadder.addcurrency.ui.tests
+package eu.krzdabrowski.currencyadder.addcurrency.impl.tests
 
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import eu.krzdabrowski.currencyadder.addcurrency.ui.CurrencyAdderRoute
+import eu.krzdabrowski.currencyadder.addcurrency.impl.CurrencyAdderRoute
 import eu.krzdabrowski.currencyadder.core.utils.test.android.TestActivity
 import eu.krzdabrowski.currencyadder.core.utils.test.android.getHiltTestViewModel
 import eu.krzdabrowski.currencyadder.usersavings.api.data.dummy.generateTestUserSavingsFromDomain
